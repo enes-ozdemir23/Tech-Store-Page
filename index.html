@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVision | Teknoloji Kataloğu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-microchip me-2"></i>TechVision
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Ürünler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <svg class="floating-svg mb-4" width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="white" stroke-width="2"/>
+                <path d="M30,50 L70,50 M50,30 L50,70" stroke="white" stroke-width="2"/>
+                <circle cx="50" cy="50" r="10" fill="white"/>
+            </svg>
+            <h1>TechVision Teknoloji</h1>
+            <p class="lead">Geleceği Şekillendiren Teknoloji Çözümleri</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Ürünlerimiz</h2>
+            
+            <!-- Category Filters -->
+            <div class="d-flex justify-content-center mb-4">
+                <button class="btn btn-outline-primary mx-2" onclick="filterProducts('all')">Tümü</button>
+                <button class="btn btn-outline-primary mx-2" onclick="filterProducts('laptop')">Laptop</button>
+                <button class="btn btn-outline-primary mx-2" onclick="filterProducts('phone')">Telefon</button>
+                <button class="btn btn-outline-primary mx-2" onclick="filterProducts('tablet')">Tablet</button>
+            </div>
+
+            <div class="row" id="productContainer">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Hakkımızda</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>TechVision olarak, 10 yılı aşkın süredir teknoloji dünyasına yön veriyoruz. Müşterilerimize en yeni ve kaliteli ürünleri sunmak için sürekli kendimizi geliştiriyoruz.</p>
+                </div>
+                <div class="col-md-6">
+                    <p>Vizyonumuz, teknolojiyi herkes için erişilebilir kılmak ve dijital dönüşüme öncülük etmektir. Değerlerimiz arasında müşteri memnuniyeti, kalite ve yenilikçilik yer alır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">İletişim</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="contact-form" id="contactForm">
+                        <div class="mb-3">
+                            <label class="form-label">Adınız</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">E-posta</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mesajınız</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.9528875766255!2d29.0117!3d41.0053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAwJzE5LjEiTiAyOcKwMDAnNDIuMiJF!5e0!3m2!1str!2str!4v1635959532036!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>TechVision</h5>
+                    <p>Teknoloji çözümleriniz için yanınızdayız.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>İletişim Bilgileri</h5>
+                    <p>
+                        <i class="fas fa-map-marker-alt me-2"></i>Teknoloji Caddesi No:123<br>
+                        <i class="fas fa-phone me-2"></i>+90 212 345 67 89<br>
+                        <i class="fas fa-envelope me-2"></i>info@techvision.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Sosyal Medya</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
